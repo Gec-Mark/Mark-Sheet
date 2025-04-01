@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B.Tech 2nd Semester mark PUBLICATION</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .instructions {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-left: 4px solid #3498db;
+            margin-bottom: 20px;
+        }
+        
+        .code-input {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        
+        button:hover {
+            background-color: #2980b9;
+        }
+        
+        hr {
+            border: 0;
+            height: 1px;
+            background-color: #ddd;
+            margin: 30px 0;
+        }
+        
+        .verify-section {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .april-fool {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: white;
+            text-align: center;
+        }
+        
+        .april-fool-content {
+            background-color: #e74c3c;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 80%;
+        }
+        
+        .april-fool h2 {
+            font-size: 2.5em;
+            color: #f1c40f;
+        }
+        
+        .april-fool p {
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+        
+        .april-fool button {
+            background-color: #2ecc71;
+            font-size: 1.2em;
+            padding: 10px 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>B.Tech 2nd Semester Mark PUBLICATION</h1>
+    
+    <div class="instructions">
+        <p><strong>Enter CODE</strong></p>
+        <p>(Code is Registration number followed by Date of Birth in ddmmyyyy format)</p>
+        <p>e.g., IF Registration number is 2301292499 and DOB is 21-01-2005 then Code is 230129249921012005</p>
+    </div>
+    
+    <div class="code-input">
+        <input type="text" id="studentCode" placeholder="Enter your code here">
+        <br>
+        <button onclick="verifyCode()">Submit</button>
+    </div>
+    
+    <hr>
+    
+    <div class="verify-section">
+        Verify
+    </div>
+    
+    <div class="april-fool" id="aprilFool">
+        <div class="april-fool-content">
+            <p> SGPA - 9.9</p>
+            <h2>APRIL FOOL! 😜</h2>
+            
+            <p>Just kidding! There's no <Mark></Mark> system here!</p>
+            <p>Enjoy your April Fool's Day! 🎉</p>
+            <button onclick="closePopup()">HA HA, VERY FUNNY</button>
+        </div>
+    </div>
+    
+    <script>
+        function verifyCode() {
+            const code = document.getElementById('studentCode').value;
+            // Show April Fool's popup regardless of input
+            document.getElementById('aprilFool').style.display = "flex";
+        }
+        
+        function closePopup() {
+            document.getElementById('aprilFool').style.display = "none";
+        }
+    </script>
+</body>
+</html>
